@@ -6,3 +6,13 @@ function awesome_scripts_enqueue() {
 }
 
 add_action('wp_enqueue_scripts', 'awesome_scripts_enqueue');
+
+
+function awesome_theme_setup() {
+    add_theme_support('menus');
+    register_nav_menu('primary', 'Primary Menu Navigation');
+    register_nav_menu('secondary', 'Footer Navigation');
+}
+
+// add_action('after_setup_theme', 'awesome_theme_setup');
+add_action('init', 'awesome_theme_setup');
