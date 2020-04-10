@@ -18,3 +18,5 @@
 
     <body <?php body_class( $awesome_classes ); ?>>
         <?php wp_nav_menu(['theme_location' => 'primary']); ?>
+
+        <center><img src="<?php header_image(); ?>" height="<?= get_custom_header()->height / 2 ?>" width="<?= get_custom_header()->width / 2 ?>" alt="" /></center>
